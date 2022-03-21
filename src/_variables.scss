@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:r,b,i,bi);  
+@import url(https://fonts.googleapis.com/css?family=Roboto:r,b,i,bi);
+
+@import "bootstrap/scss/_functions";
+
+$font-family-sans-serif: "PT Sans",  Roboto, system-ui, -apple-system, "Segoe UI", "Liberation Sans", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Twemoji Mozilla", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 2048px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 1980px
+);

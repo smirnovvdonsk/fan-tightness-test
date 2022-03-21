@@ -1,0 +1,79 @@
+@import "./_variables.scss";
+@import "bootstrap/scss/bootstrap";
+
+@media print {
+  a:after {
+    content: " <" attr(href) ">";
+  }
+}
+
+@page {
+  margin: 2cm 1cm 1cm 1cm;
+}
+
+p {
+  text-indent: 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+  line-height: 1.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  li {
+    text-indent: 0;
+    margin-left: 0.5rem;
+  }
+}
+
+.table-blind {
+  //width: 100%;
+  $margin-y: 0.3rem;
+  margin-top: $margin-y;
+  margin-bottom: $margin-y;
+  td {
+    $padding-x: 0.2rem;
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+  }
+}
+
+.printed-table {
+  border: 2px solid black;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  caption-side: top;
+  th {
+    font-weight: normal;
+    border: 2px solid black;
+    text-align: center;
+  }
+  td {
+    border: 1px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+  th, td {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
+}
+
+@media print {
+  .printed-table, svg{
+    break-inside: avoid;
+  }
+}
+
+.list-animation-move,
+.list-animation-enter-active,
+.list-animation-leave-active {
+  transition: all 0.5s ease;
+}
+.list-animation-enter-from,
+.list-animation-leave-to {
+  opacity: 0;
+  transform: scale(.1);
+}
+.list-animation-leave-active {
+  position: absolute;
+}
